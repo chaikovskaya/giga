@@ -323,7 +323,7 @@
         margin-bottom: 50px;
         &-inner {
             overflow: visible;
-            margin-bottom: 7px;
+            margin-bottom: 22px;
         }
         &-block {
             overflow: visible;
@@ -375,8 +375,8 @@
         &-button {
             display: none;
         }
-        &-pagination {
-            display: none;
+        .slider-pagination {
+            margin-bottom: 22px;
         }
     }
     @media screen
@@ -537,7 +537,7 @@
         }
         &-inner {
             overflow: visible;
-            margin-bottom: 0;
+            margin-bottom: 22px;
         }
         &-block {
             overflow: visible;
@@ -587,9 +587,6 @@
             line-height: 24px;
         }
         &-button {
-            display: none;
-        }
-        &-pagination {
             display: none;
         }
         &-banner {

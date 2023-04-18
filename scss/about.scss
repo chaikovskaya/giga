@@ -155,6 +155,7 @@
         display: block;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     &-item:nth-child(3) &-inner,
     &-item:nth-child(10) &-inner {
