@@ -1,0 +1,83 @@
+
+.services-detail {
+    margin-bottom: 85px;
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    @media screen
+    and (max-width: $mobile){
+    }
+}
+
+.services-stages {
+    margin-bottom: 62px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-list-item {
+        width: 25%;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+    &-block {
+        display: flex;
+    }
+    &-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50em;
+        margin-right: 15px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+        color: var(--color6);
+        border: 1px solid var(--color1);
+    }
+    &-info {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+        &-number {
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+        &-info {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 30px;
+        &-list-item {
+            width: 50%;
+            padding-right: 20px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-list-item {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}

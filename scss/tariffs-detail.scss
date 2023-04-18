@@ -1,0 +1,205 @@
+
+.tariffs-detail {
+    margin-bottom: 92px;
+    &-main .category-main-container:after {
+        background: linear-gradient(122.33deg, rgba(20, 20, 20, 0.45) 38.5%, rgba(20, 20, 20, 0.12) 79.78%);
+    }
+    &-info {
+        display: flex;
+        margin-bottom: 88px;
+    }
+    &-info-banner {
+        width: 36.5%;
+        padding-right: 30px;
+    }
+    &-info-content {
+        width: 63.5%;
+        padding-top: 25px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        ul li {
+            width: 52%;
+            padding-left: 24px;
+            padding-right: 24px;
+            margin-bottom: 20px;
+            &:nth-child(2n) {
+                width: 48%;
+            }
+            &:before {
+                top: 7px;
+                width: 14px;
+                height: 11px;
+                background: url(../images/tariffs/tariffs-icon-1.svg) no-repeat 0 0;
+            }
+        }
+    }
+    &-info-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--color6);
+    }
+    &-info-text {
+        margin-left: -24px;
+    }
+    &-banner {
+        position: relative;
+        display: block;
+        height: 420px;
+        padding: 39px 26px;
+        background-color: var(--color1);
+        border-radius: 30px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+    &-banner-name {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin-bottom: 15px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 45px;
+    }
+    &-banner-label {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin-bottom: 38px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &-banner-label-text {
+        margin-right: 14px;
+    }
+    &-banner-price {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &-banner-button {
+        position: relative;
+        z-index: 1;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-weight: 500;
+    }
+    &-banner-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-height: 281px;
+    }
+    &-banner:hover &-banner-button {
+        border-radius: 10px;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+        &-banner {
+            padding: 30px 20px;
+        }
+        &-banner-name {
+            font-size: 26px;
+            line-height: 38px;
+        }
+        &-banner-label-text {
+            margin-right: 11px;
+        }
+        &-banner-price {
+            font-size: 26px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 58px;
+        &-info {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+        &-info-banner {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 44px;
+        }
+        &-info-content {
+            width: 100%;
+            padding-top: 0;
+        }
+        &-banner {
+            height: 234px;
+            padding: 24px 20px;
+        }
+        &-banner-name {
+            margin-bottom: 9px;
+            max-width: 600px;
+            font-size: 24px;
+            line-height: 34px;
+        }
+        &-banner-label {
+            max-width: 530px;
+            margin-bottom: 29px;
+            font-size: 16px;
+            line-height: 23px;
+        }
+        &-banner-label-text {
+            margin-right: 10px;
+        }
+        &-banner-price {
+            font-size: 24px;
+        }
+        &-banner-img {
+            max-height: 200px;
+        }
+        &-banner-button {
+            padding-top: 11px;
+            padding-bottom: 11px;
+            font-size: 15px;
+        }
+        &-info-label {
+            margin-bottom: 6px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-info-banner {
+            margin-bottom: 36px;
+        }
+        &-info-content {
+            ul {
+                flex-direction: column;
+            }
+            ul li {
+                width: 100%;
+                &:nth-child(2n) {
+                    width: 100%;
+                }
+            }
+        }
+        &-info {
+            margin-bottom: 50px;
+        }
+        &-banner {
+            height: 380px;
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+        &-banner-img {
+            max-height: 165px;
+        }
+        &-banner-button {
+            padding: 11px 24px;
+            font-size: 14px;
+        }
+    }
+}

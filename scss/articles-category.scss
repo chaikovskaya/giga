@@ -1,0 +1,385 @@
+
+.articles-category {
+    display: flex;
+    margin-bottom: 90px;
+    &-side {
+        order: -1;
+        min-width: 320px;
+        width: 25.5%;
+        padding-right: 30px;
+    }
+    &-content {
+        width: 74.5%;
+    }
+    &-side-name {
+        display: block;
+        margin-bottom: 18px;
+        font-size: 24px;
+        line-height: 27px;
+        font-weight: 600;
+        color: #2A2A30;
+    }
+    &-select {
+        display: none;
+        margin-bottom: 31px;
+        max-width: 320px;
+    }
+    &-select-label {
+        color: var(--color6);
+    }
+    &-select .selectric-items &-select-label {
+        display: none;
+    }
+    &-select .label {
+        color: var(--color1);
+    }
+    &-default {
+        text-transform: uppercase;
+        color: var(--color6);
+        font-size: 12px;
+        line-height: 16px;
+
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &-list-item {
+        width: 33.3%;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.6);
+        }
+    }
+    &-box {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        height: 230px;
+        padding: 24px;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: border-radius 0.3s linear;
+    }
+    &-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 52px;
+        padding: 22px 20px 28px 23px;
+    }
+    &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s linear;
+    }
+    &-container:hover &-box {
+        border-radius: 0;
+    }
+    &-box:hover &-img {
+        transform: scale(1.1);
+    }
+    &-name {
+        min-height: 54px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--color6);
+        text-decoration: none;
+        &:hover {
+            color: var(--color6);
+        }
+    }
+    &-announce {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    &-tag {
+        position: relative;
+        z-index: 1;
+    }
+    &-actions {}
+
+    @media screen
+    and (max-width: $desktop){
+        &-list-item {
+            width: 50%;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        flex-direction: column;
+        margin-bottom: 60px;
+        &-side {
+            order: 1;
+            display: flex;
+            width: 100%;
+            padding-right: 0;
+        }
+        &-content {
+            width: 100%;
+            margin-bottom: 77px;
+        }
+        &-select {
+            display: block;
+        }
+        &-list {
+            margin-bottom: 10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        &-list-item {
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &-container {
+            box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.6);
+        }
+        &-box {
+            height: 174px;
+            padding: 16px 13px;
+            border-radius: 25px 25px 0 0;
+        }
+        &-box:hover &-img {
+            transform: none;
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            padding: 14px 19px 10px;
+        }
+        &-announce {
+            min-height: 48px;
+            margin-bottom: 18px;
+            @include fix-rows();
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
+        &-informer {
+            order: 1;
+            margin-top: auto;
+        }
+        &-name {
+            margin-bottom: 10px;
+            min-height: 44px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: -0.01em;
+        }
+        &-announce {
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &-actions {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+        &-side-name {
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-side {
+            flex-direction: column;
+        }
+        &-content {
+            margin-bottom: 65px;
+        }
+        &-select {
+            max-width: none;
+        }
+        &-list-item {
+            width: 100%;
+        }
+        &-actions {
+            width: 100%;
+        }
+    }
+}
+
+.articles-category-menu {
+    margin-bottom: 30px;
+    padding: 37px 27px 33px;
+    border: 1px solid #D7D7E3;
+    border-radius: 30px;
+    &-list {
+        max-width: 220px;
+    }
+    &-item {
+        margin-bottom: 19px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-link {
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color6);
+        text-decoration: none;
+        &:hover {
+            font-weight: 600;
+            color: var(--color6);
+            letter-spacing: -0.02em;
+        }
+    }
+    &-item_active {}
+    &-item_active &-link {
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        display: none;
+    }
+}
+
+.articles-category-popular {
+    margin-bottom: 40px;
+    &-inner {
+        min-height: 448px;
+        padding: 34px 24px 40px;
+        border-radius: 30px;
+        background-color: var(--color2);
+    }
+    &-list {}
+    &-item {
+        margin-bottom: 21px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-link {
+        display: block;
+        margin-bottom: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color5);
+        text-decoration: none;
+        &:hover {
+            font-weight: 600;
+            color: var(--color5);
+            letter-spacing: -0.02em;
+        }
+    }
+    &-date {
+        display: block;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 17px;
+        color: var(--color4);
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        width: 60%;
+        padding-right: 20px;
+        margin-bottom: 0;
+        &-inner {
+            min-height: auto;
+            height: 100%;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            border-radius: 25px;
+        }
+        &-link {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-date {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 37px;
+    }
+}
+
+.articles-category-hashtag {
+    margin-bottom: 33px;
+    &-list {
+        margin-right: -15px;
+    }
+
+    @media screen
+    and (min-width: $tablet){
+        .tag-link {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 5px;
+        &-list {
+            margin-right: 0;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        margin-bottom: 30px;
+    }
+}
+
+.articles-category-banner {
+    height: 200px;
+    .banner-pic {
+        max-height: 90px;
+    }
+    .banner-name {
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .banner-info {
+        max-width: 190px;
+    }
+    @media screen
+    and (max-width: $tablet){
+        height: 156px;
+        flex-grow: 1;
+        .banner-name {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .banner-pic {
+            max-height: 80px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        flex-grow: initial;
+        height: 198px;
+        .banner-pic {
+            max-height: 90px;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+
+.contacts {
+    &-list {
+        display: flex;
+    }
+    &-list-block {
+        width: 40%;
+        display: flex;
+    }
+    &-list-block_phone {
+        width: 20%;
+    }
+    &-list-item {
+        width: 50%;
+        margin-bottom: 40px;
+        padding-right: 30px;
+    }
+    &-list-item_hours {
+        width: 42%;
+    }
+    &-list-block_phone &-list-item {
+        width: 100%;
+    }
+    &-name {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: var(--color6);
+    }
+    &-info {
+        font-size: 15px;
+        line-height: 28px;
+        color: var(--color6);
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    &-phone {}
+    &-phone-item {
+        margin-bottom: 13px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-phone-label {
+    }
+    &-phone-number {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 22px;
+        a {
+            text-decoration: none;
+        }
+    }
+    &-map {
+        height: 460px;
+        margin-bottom: 100px;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+        &-list-item_hours {
+            width: 45%;
+        }
+    }
+    @media screen
+    and (max-width: 1200px){
+        &-list-block {
+            display: block;
+            width: 33.3%;
+        }
+        &-list-block_phone {
+            width: 33.3%;
+        }
+        &-list-item {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &-list-item_hours {
+            width: 100%;
+        }
+        &-name {
+            margin-bottom: 8px;
+        }
+        &-info {
+            font-size: 14px;
+        }
+        &-label {
+            font-size: 14px;
+        }
+        &-phone-item {
+            margin-bottom: 15px;
+        }
+        &-map {
+            height: 365px;
+            margin-bottom: 64px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-list {
+            flex-wrap: wrap;
+        }
+        &-list-block {
+            width: 100%;
+        }
+        &-list-item {
+            padding-right: 0;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+
+.articles-detail {
+    &-title {
+        margin-bottom: 32px;
+    }
+    &-select {
+        margin-bottom: 22px;
+    }
+
+    &-banner {
+        height: 400px;
+    }
+    &-banner .banner-pic {
+        max-height: 217px;
+    }
+    &-banner .banner-name {
+        margin-bottom: 15px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    &-banner .banner-info {
+        max-width: 190px;
+    }
+
+    &-container {
+        margin-bottom: 60px;
+        .content h2 {
+            margin-top: 37px;
+        }
+    }
+    &-informer {
+        margin-top: 13px;
+        margin-bottom: 18px;
+    }
+    &-img {
+        position: relative;
+        height: 426px;
+        margin-bottom: 36px;
+    }
+    &-pic {
+        display: block;
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-tag {
+        position: absolute;
+        top: 25px;
+        left: 23px;
+    }
+    &-schedule {
+        margin-bottom: 47px;
+    }
+    &-schedule-name-wrapper {
+        overflow: hidden;
+        margin-bottom: 17px;
+    }
+    &-schedule-name {
+        position: relative;
+        display: inline-block;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+        color: var(--color1);
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: calc(100% + 7px);
+            height: 1px;
+            width: 313px;
+            max-width: none;
+            background-color: var(--color1);
+        }
+    }
+    &-schedule-list {}
+    &-schedule-list-item {
+        margin-bottom: 11px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-schedule-list-link {
+        font-size: 18px;
+        line-height: 27px;
+        color: #111111;
+        &:hover {
+            color: #111111;
+            text-decoration: none;
+        }
+    }
+    &-text {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        &-title {
+            margin-bottom: 16px;
+        }
+        &-banner {
+            height: 156px;
+            flex-grow: 1;
+        }
+        &-banner .banner-pic {
+            max-height: 80px;
+        }
+        &-banner .banner-name {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &-img {
+            height: 250px;
+            margin-bottom: 23px;
+        }
+        &-tag {
+            top: 16px;
+            left: 14px;
+        }
+        &-pic {
+            border-radius: 25px;
+        }
+        &-schedule {
+            margin-bottom: 35px;
+        }
+        &-schedule-name-wrapper {
+            margin-bottom: 10px;
+        }
+        &-schedule-name {
+            font-size: 16px;
+            line-height: 24px;
+            &:after {
+                width: 241px;
+            }
+        }
+        &-schedule-list-item {
+            margin-bottom: 10px;
+        }
+        &-schedule-list-link {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 26px;
+        }
+        &-container {
+            margin-bottom: 33px;
+            .content h2 {
+                margin-top: 32px;
+            }
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-banner {
+            height: 198px;
+            flex-grow: initial;
+        }
+        &-banner .banner-pic {
+            max-height: 90px;
+        }
+        &-schedule {
+            margin-bottom: 31px;
+        }
+        &-schedule-name {
+            &:after {
+                width: 100vw;
+            }
+        }
+    }
+}
