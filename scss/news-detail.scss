@@ -49,6 +49,7 @@
         }
         &-side {
             order: initial;
+            min-width: auto;
             width: 100%;
             display: flex;
             padding-right: 0;

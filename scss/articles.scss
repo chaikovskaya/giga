@@ -184,6 +184,7 @@
         }
     }
     &-label {
+        display: inline-block;
         font-size: 13px;
         line-height: 26px;
         color: var(--color5);
@@ -196,7 +197,6 @@
         margin-right: 7px;
     }
     &-item_date &-label {
-        display: inline-block;
         padding-left: 10px;
         padding-right: 10px;
         border: 1px solid rgba(0, 0, 0, 0.7);
@@ -206,7 +206,7 @@
 
     @media screen
     and (max-width: $tablet){
-        height: 25px;
+        height: 26px;
         &-item {
             margin-right: 15px;
         }

@@ -1239,10 +1239,15 @@ function initShowMore(showmoreExtra) {
 
 function initFormatPrice() {
     $('.js-format-price').each(function(){
-        let str = parseFloat($(this).text()) || "";
+        let classActive = 'js-format-price-active';
 
-        let strNew = str.toLocaleString();
-        $(this).text(strNew);
+        if (!$(this).hasClass(classActive)) {
+            let str = parseFloat($(this).text()) || "";
+
+            let strNew = str.toLocaleString();
+            $(this).text(strNew);
+            $(this).addClass(classActive);
+        }
     });
 }
 
