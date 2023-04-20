@@ -2921,7 +2921,7 @@ input.form-error::placeholder {
   z-index: 990;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #fff;
 }
 .mob-menu_active .mob-menu-decor {
   display: block;
@@ -5041,7 +5041,7 @@ input.form-error::placeholder {
 .projects-block-box {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   height: 373px;
   border-radius: 30px;
   overflow: hidden;
@@ -5068,11 +5068,15 @@ input.form-error::placeholder {
 .projects-block-detail {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 30px 25px;
 }
 .projects-block-name {
   display: block;
   width: fit-content;
+  margin-top: auto;
   margin-bottom: 5px;
   font-weight: 500;
   font-size: 64px;
@@ -5102,6 +5106,7 @@ input.form-error::placeholder {
   line-clamp: 3;
 }
 .projects-block-link {
+  margin-top: auto;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -5120,6 +5125,12 @@ input.form-error::placeholder {
 .projects-block-box:hover .projects-block-img {
   transform: scale(1.1);
 }
+@media screen and (max-width: 1489px) {
+  .projects-block-name {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
 @media screen and (max-width: 992px) {
   .projects-block-inner {
     margin-bottom: 22px;
@@ -5133,7 +5144,7 @@ input.form-error::placeholder {
     height: 334px;
   }
   .projects-block-info {
-    min-height: 144px;
+    min-height: 96px;
     margin-bottom: 20px;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -5144,14 +5155,14 @@ input.form-error::placeholder {
     word-wrap: break-word;
     -webkit-box-orient: vertical;
     box-orient: vertical;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     font-size: 14px;
     line-height: 24px;
   }
   .projects-block-name {
-    font-size: 48px;
-    line-height: 54px;
+    font-size: 40px;
+    line-height: 46px;
   }
   .projects-block-link {
     font-size: 15px;
@@ -10461,6 +10472,8 @@ ymaps [class*=-image] {
   position: absolute;
   bottom: 0;
   right: 0;
+  max-height: 210px;
+  max-width: 200px;
 }
 .actions-button {
   margin-top: 26px;
@@ -10496,6 +10509,7 @@ ymaps [class*=-image] {
 .actions-list-item_bgr .actions-img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
@@ -10518,9 +10532,6 @@ ymaps [class*=-image] {
 .actions-list-item_banner .actions-info {
   color: #FFFFFF;
 }
-.actions-list-item_4 .actions-box {
-  background-color: var(--color9);
-}
 .actions-list-item_4 .actions-name {
   color: #FFFFFF;
 }
@@ -10534,6 +10545,9 @@ ymaps [class*=-image] {
   .actions-container {
     padding-top: 22px;
     padding-bottom: 22px;
+  }
+  .actions-img {
+    max-width: 150px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -10571,6 +10585,9 @@ ymaps [class*=-image] {
     font-size: 14px;
     line-height: 24px;
   }
+  .actions-img {
+    max-height: 130px;
+  }
   .actions-list-item_5 {
     order: 4;
   }
@@ -10588,6 +10605,7 @@ ymaps [class*=-image] {
     line-height: 31px;
   }
   .actions-list-item_1:not(.actions-list-item_bgr) .actions-img, .actions-list-item_banner:not(.actions-list-item_bgr) .actions-img {
+    max-width: 100%;
     max-height: 205px;
   }
   .actions-list-item_6 {
@@ -10848,6 +10866,11 @@ ymaps [class*=-image] {
   }
   .projects-box:hover .projects-link-icon path {
     fill: var(--color1);
+  }
+}
+@media screen and (max-width: 1489px) {
+  .projects-tag {
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 992px) {
