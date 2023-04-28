@@ -770,15 +770,15 @@
         }
     }
     &-list-name {
-        margin-right: 25px;
+        margin-right: 17px;
         font-weight: 500;
-        font-size: 60px;
-        line-height: 50px;
+        font-size: 48px;
+        line-height: 48px;
         color: var(--color6);
     }
     &-list-info {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 27px;
         text-transform: uppercase;
         color: var(--color6);
@@ -788,15 +788,18 @@
     and (max-width: $desktop){
         &-list-item {
             padding-left: 15px;
+            &:nth-child(1) {
+                width: 21%;
+            }
         }
         &-list-name {
-            margin-right: 15px;
-            font-size: 38px;
-            line-height: 43px;
+            margin-right: 10px;
+            font-size: 29px;
+            line-height: 33px
         }
         &-list-info {
-            font-size: 16px;
-            line-height: 25px;
+            font-size: 13px;
+            line-height: 20px;
         }
     }
     @media screen
