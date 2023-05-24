@@ -241,6 +241,23 @@
     }
 
     @media screen
+    and (max-width: $desktop){
+        &-block {
+            padding-left: 17px;
+        }
+        &-name {
+            margin-top: 1px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &-icon {
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+        }
+    }
+    @media screen
     and (max-width: $tablet){
         margin-bottom: 48px;
         margin-left: 48px;
@@ -271,9 +288,10 @@
             min-width: 24px;
             width: 24px;
             height: 24px;
+            margin-right: 12px;
         }
         &-name {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 20px;
         }
         &-info {

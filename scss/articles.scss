@@ -506,6 +506,8 @@
         text-decoration: none;
     }
     &-banner-name {
+        position: relative;
+        z-index: 1;
         display: block;
         margin-bottom: 11px;
         font-weight: 600;
@@ -514,6 +516,8 @@
         color: #FFFFFF;
     }
     &-banner-info {
+        position: relative;
+        z-index: 1;
         display: block;
         max-width: 254px;
         font-weight: 500;
